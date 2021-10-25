@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,7 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -118,7 +116,7 @@ public class ContentsController {
 		}
 	}
 
-	@GetMapping("/contents/update/{contentsno}")
+	@GetMapping("/admin/contents/update/{contentsno}")
 	public String update(@PathVariable("contentsno") int contentsno, Model model) {
 
 		ContentsDTO dto = service.detail(contentsno);
@@ -149,7 +147,7 @@ public class ContentsController {
 		}
 	}
 
-	@GetMapping("/admin/create")
+	@GetMapping("/admin/contents/create")
 	public String create() {
 		return "/contents/create";
 	}
@@ -209,6 +207,28 @@ public class ContentsController {
 		request.setAttribute("cateno", cateno);
 
 		return "/contents/mainlist";
+
+	}
+	
+	@GetMapping("/admin/contents/delete/{contentsno}")
+	public String delete() {
+
+		return "/contents/delete";
+	}
+
+	@PostMapping("/contents/delete")
+	public String delete(HttpServletRequest request, int contentsno) {
+
+		Map map = new HashMap();
+		map.put("contentsno", contentsno);
+		
+		int cnt = service.delete(contentsno);
+		
+		if (cnt == 1) {
+			return "redirect:./list";
+		} else {
+			return "./error";
+		}
 
 	}
 

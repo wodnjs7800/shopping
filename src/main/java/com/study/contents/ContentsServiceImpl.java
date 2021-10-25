@@ -2,7 +2,7 @@ package com.study.contents;
  
 import java.util.List;
 import java.util.Map;
- 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service("com.study.contents.ContentsServiceImpl")
@@ -56,6 +56,12 @@ public List<Map> getCategory() {
 public List<ContentsDTO> mainlist(Map map) {
 	// TODO Auto-generated method stub
 	return mapper.mainlist(map);
+}
+
+@Override
+public int delete(int contentsno) {
+	// TODO Auto-generated method stub
+	return mapper.delete(contentsno);
 }
  
 }

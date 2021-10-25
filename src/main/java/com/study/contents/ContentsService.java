@@ -21,4 +21,6 @@ public interface ContentsService {
 	
 	List<ContentsDTO> mainlist(Map map);
 
+	int delete(int contentsno);
+
 }

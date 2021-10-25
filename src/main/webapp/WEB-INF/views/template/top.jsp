@@ -75,7 +75,7 @@
         <ul class="dropdown-menu">
           <li><a href="${root}/member/mypage">Mypage</a></li>
           <li><a href="${root}/review/list">Review</a></li>
-          <li><a href="#">Notice</a></li>
+          <li><a href="${root}/notice/list">Notice</a></li>
           <li><a href="#">Q&A</a></li>
         </ul>
       </li>
@@ -88,7 +88,7 @@
       <li><a href="${root}/member/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </c:when>
               <c:when test="${not empty sessionScope.id && sessionScope.grade == 'A'}">
-    <li><a href="${root}/admin/create"><span class="glyphicon glyphicon-plus-sign"></span> 상품등록</a></li>
+    <li><a href="${root}/admin/contents/create"><span class="glyphicon glyphicon-plus-sign"></span> 상품등록</a></li>
     <li><a href="${root}/contents/list"><span class="glyphicon glyphicon-list"></span> 상품목록</a></li>
     <li><a href="${root}/admin/list"><span class="glyphicon glyphicon-list"></span> 회원목록</a></li>
     <li><a href="${root}/member/logout"><span class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>

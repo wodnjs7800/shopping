@@ -5,7 +5,7 @@
 <head>
   <title>homepage</title>
   <meta charset="utf-8">
-  <script type="text/javascript" src="${pageContext.request.contextPath}/ckeditor/ckeditor.js">     </script>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/ckeditor/ckeditor.js"> </script>
   <script type="text/JavaScript">
  $(function() {
 	 CKEDITOR.replace('detail'); // <TEXTAREA>태그 id 값

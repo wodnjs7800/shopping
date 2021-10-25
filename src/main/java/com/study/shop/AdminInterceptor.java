@@ -3,9 +3,10 @@ package com.study.shop;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
- 
+
 import com.study.utility.Utility;
  
 public class AdminInterceptor extends HandlerInterceptorAdapter {
@@ -32,7 +33,7 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
   public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
       ModelAndView modelAndView) throws Exception {
     System.out.println("postHandle executed.");
-    modelAndView.addObject("admin", "관리자 관련 기능을 출력합니다.");
+    //modelAndView.addObject("admin", "관리자 관련 기능을 출력합니다.");
   }
  
 // JSP등 View 페이지 출력전에 작동됨.

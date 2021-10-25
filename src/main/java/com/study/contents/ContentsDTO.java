@@ -1,6 +1,7 @@
 package com.study.contents;
  
 import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
  
 @Data

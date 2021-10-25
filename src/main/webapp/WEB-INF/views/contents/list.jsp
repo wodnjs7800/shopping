@@ -55,7 +55,7 @@
       name="word" value="${word}">
     </div>
     <button type="submit" class="btn btn-default" >검색</button>
-    <button type="button" class="btn btn-default" onclick="location.href='../admin/create'">등록</button>
+    <button type="button" class="btn btn-default" onclick="location.href='../admin/contents/create'">등록</button>
   </form>
   
   <table class="table table-striped">
@@ -95,11 +95,11 @@
     <td>${dto.price}</td>
     <td>${dto.rdate}</td>
     <td>${dto.stock}</td>
-    <td> <a href="./update/${dto.contentsno }">
+    <td> <a href="../admin/contents/update/${dto.contentsno }">
           <span class="glyphicon glyphicon-edit"></span>
         </a>
         /
-        <a href="./delete/${dto.contentsno }">
+        <a href="../admin/contents/delete/${dto.contentsno }">
           <span class="glyphicon glyphicon-trash"></span>
         </a>
         /

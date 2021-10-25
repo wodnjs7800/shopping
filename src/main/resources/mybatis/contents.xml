@@ -119,5 +119,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         )where r >= #{sno} and r <= #{eno}
     ]]>
 	</select>
+	
+	<delete id="delete" parameterType="int">
+    delete from contents
+	where contentsno = #{contentsno};
+  </delete> 
 
 </mapper>

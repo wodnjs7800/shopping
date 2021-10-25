@@ -21,9 +21,9 @@
 <c:otherwise>
 <c:set var="list" value="${list}"/>
 <div class="row">
-    <c:forEach var="dto" begin="0" end="3" items="${list}">
+    <c:forEach var="dto" begin="0" end="10" items="${list}">
     <div class="col-sm-3">
-      <h3>Ripped Skinny</h3>
+      <h3>${dto.pname }</h3>
       <a href="/contents/detail/${dto.contentsno }"><p>
       <img src="/pstorage/${dto.filename }" class="img-thumbnail"  width="236" height="306"></p></a>
         <p>${dto.pname }<br><b>${dto.price }</b></p>
@@ -31,15 +31,7 @@
     </c:forEach>
 </div>
  <div class="row">
-    <c:forEach var="dto" begin="4" end="7" items="${list}">
-    <div class="col-sm-3">
-      <h3>Vintage Skinny</h3>
-      <a href="/contents/detail/${dto.contentsno }"><p>
-      <img src="/pstorage/${dto.filename }" class="img-thumbnail"  width="236" height="306"></p></a>
-        <p>${dto.pname }<br><b>${dto.price }</b></p>
-    </div>
-    </c:forEach>
-</div>
+
   ${paging}
 </c:otherwise>
 </c:choose>
